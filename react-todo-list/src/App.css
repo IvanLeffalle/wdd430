@@ -1,42 +1,108 @@
+/* ===== Root Layout ===== */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0b0c10;
+  color: #c5c6c7;
+}
+
+/* ===== App Container ===== */
+.app-container {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* ===== Title ===== */
+.app-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #eaf0f5;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ===== Form ===== */
+.form-row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.form-row input[type="text"] {
+  flex: 1;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #45a29e;
+  border-radius: 6px;
+  background-color: #1f2833;
+  color: #c5c6c7;
+  outline: none;
+  transition: all 0.2s ease;
 }
 
-.card {
-  padding: 2em;
+.form-row input[type="text"]:focus {
+  border-color: #66fcf1;
+  box-shadow: 0 0 4px rgba(102, 252, 241, 0.5);
 }
 
-.read-the-docs {
-  color: #888;
+.form-row button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #45a29e;
+  color: #1f2833;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form-row button:hover {
+  background-color: #66fcf1;
+}
+
+/* ===== Task List ===== */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1f2833;
+  color: #c5c6c7;
+  padding: 0.6rem 1rem;
+  margin: 0.4rem 0;
+  border: 1px solid #45a29e;
+  border-radius: 6px;
+  transition: box-shadow 0.2s ease;
+}
+
+.list li:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.list li label {
+  cursor: pointer;
+  flex: 1;
+}
+
+/* ===== Delete Button ===== */
+.delete-button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #eaf0f5;
+  background-color: #c0392b;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: #e74c3c;
 }
